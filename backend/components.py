@@ -7,68 +7,16 @@ class StyleProvider:
     """Provedor de estilos padrão usando Tailwind CSS"""
     
     DEFAULT_STYLES = {
-        'input': {
-            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200',
-            'style': {}
-        },
-        'select': {
-            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white transition duration-200',
-            'style': {}
-        },
-        'textarea': {
-            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical transition duration-200',
-            'style': {}
-        },
         'button': {
             'class_name': 'px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200',
-            'style': {}
-        },
-        'button_secondary': {
-            'class_name': 'px-4 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200',
             'style': {}
         },
         'button_danger': {
             'class_name': 'px-4 py-2 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200',
             'style': {}
         },
-        'label': {
-            'class_name': 'block text-sm font-medium text-gray-700 mb-1',
-            'style': {}
-        },
-        'div': {
-            # 'class_name': 'space-y-4',
-            'style': {}
-        },
-        'div_container': {
-            'class_name': 'max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg',
-            'style': {}
-        },
-        'div_grid': {
-            'class_name': 'grid grid-cols-1 md:grid-cols-2 gap-4',
-            'style': {}
-        },
-        'div_flex': {
-            'class_name': 'flex flex-wrap gap-4 items-center',
-            'style': {}
-        },
-        'span': {
-            'class_name': 'inline-block',
-            'style': {}
-        },
-        'span_badge': {
-            'class_name': 'inline-block px-2 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full',
-            'style': {}
-        },
-        'span_error': {
-            'class_name': 'inline-block text-sm text-red-600 mt-1',
-            'style': {}
-        },
-        'form': {
-            'class_name': 'space-y-6 p-6 bg-white rounded-lg shadow-md',
-            'style': {}
-        },
-        'form_inline': {
-            'class_name': 'flex flex-wrap gap-4 items-end p-4 bg-gray-50 rounded-lg',
+        'button_secondary': {
+            'class_name': 'px-4 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200',
             'style': {}
         },
         'checkbox': {
@@ -83,6 +31,45 @@ class StyleProvider:
             'class_name': 'text-sm font-medium text-gray-700 cursor-pointer',
             'style': {}
         },
+        'div': {
+            'style': {}
+        },
+        'div_container': {
+            'class_name': 'max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg',
+            'style': {}
+        },
+        'div_flex': {
+            'class_name': 'flex flex-wrap gap-4 items-center',
+            'style': {}
+        },
+        'div_grid': {
+            'class_name': 'grid grid-cols-1 md:grid-cols-2 gap-4',
+            'style': {}
+        },
+        'field_group': {
+            'class_name': 'space-y-2',
+            'style': {}
+        },
+        'field_group_inline': {
+            'class_name': 'flex flex-wrap gap-4 items-center',
+            'style': {}
+        },
+        'form': {
+            'class_name': 'space-y-6 p-6 bg-white rounded-lg shadow-md',
+            'style': {}
+        },
+        'form_inline': {
+            'class_name': 'flex flex-wrap gap-4 items-end p-4 bg-gray-50 rounded-lg',
+            'style': {}
+        },
+        'input': {
+            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200',
+            'style': {}
+        },
+        'label': {
+            'class_name': 'block text-sm font-medium text-gray-700 mb-1',
+            'style': {}
+        },
         'radio': {
             'class_name': 'flex items-center space-x-2',
             'style': {}
@@ -95,16 +82,28 @@ class StyleProvider:
             'class_name': 'text-sm font-medium text-gray-700 cursor-pointer',
             'style': {}
         },
-        'field_group': {
-            'class_name': 'space-y-2',
+        'select': {
+            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white transition duration-200',
             'style': {}
         },
-        'field_group_inline': {
-            'class_name': 'flex flex-wrap gap-4 items-center',
+        'span': {
+            'class_name': 'inline-block',
+            'style': {}
+        },
+        'span_badge': {
+            'class_name': 'inline-block px-2 py-1 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full',
+            'style': {}
+        },
+        'span_error': {
+            'class_name': 'inline-block text-sm text-red-600 mt-1',
+            'style': {}
+        },
+        'textarea': {
+            'class_name': 'w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical transition duration-200',
             'style': {}
         }
     }
-    
+
     @classmethod
     def get_style(cls, component_type: str, variant: str = None) -> Dict[str, Any]:
         """
@@ -687,15 +686,64 @@ class Page(BaseComponent):
         
         self.label = kwargs.get('label', '')
         self.components = kwargs.get('components', [])
+        self.layout = kwargs.get('layout', '')
 
     def to_dict(self) -> Dict[str, Any]:
         return {
             'page': {
-                'layout': 'grid',
+                'layout': self.layout,
                 'title': self.label,
                 'components': [component.to_dict() for component in self.components],
             }
         }
+
+
+class InputLabel(Div):
+    """
+    Componente composto que agrupa um Label e um Input,
+    garantindo que estejam sempre conectados.
+    Herda de Div para atuar como o contêiner.
+    """
+    def __init__(self, 
+                 # Propriedades para o Label
+                 label: str,
+                 
+                 # Propriedades para o Input (o 'name' é obrigatório)
+                 name: str,
+                 
+                 # Outras propriedades comuns do Input (passadas via kwargs)
+                 **kwargs):
+        """
+        Args:
+            label (str): O texto que aparecerá na tag <label>.
+            name (str): O atributo 'name' para a tag <input>. Usado também como 'id' se não for fornecido.
+            **kwargs: Todos os outros argumentos são passados diretamente para o componente Input
+                      (ex: type, placeholder, required, on_change, etc.).
+                      Atributos para o Div contêiner (ex: add_class_name) podem ser passados,
+                      mas geralmente o estilo padrão de 'field_group' é suficiente.
+        """
+        # 1. Inicializa o Div contêiner. Usamos o estilo 'field_group' para um espaçamento padrão.
+        super().__init__(style_variant='field_group')
+
+        # 2. Determina o ID do input. É crucial para conectar o label.
+        #    Se o usuário não passar um 'id', usamos o 'name' como um padrão seguro.
+        input_id = kwargs.get('id', name)
+
+        # 3. Cria o componente Label, associando-o ao input através de 'html_for'.
+        label_component = Label(content=label, html_for=input_id)
+        
+        # 4. Assegura que o 'name' e o 'id' estão no dicionário de props do input.
+        input_props = kwargs.copy()
+        input_props['name'] = name
+        input_props['id'] = input_id
+
+        # 5. Cria o componente Input com todas as propriedades recebidas.
+        input_component = Input(**input_props)
+        
+        # 6. Adiciona o Label e o Input como filhos do Div contêiner.
+        self.add_child(label_component)
+        self.add_child(input_component)
+
 
 # Exemplo de uso
 def get_example():
@@ -710,32 +758,32 @@ def get_example():
     
     # Grupo Nome
     name_group = Div(add_class_name="form-group")
-    name_label = Label(html_for="name", add_class_name="form-label", content="Nome:")
-    name_input = Input(
+    name_input = InputLabel(
         id="name",
         name="name",
         type="text",
+        label="Nome:",
         add_class_name="form-control",
         placeholder="Digite seu nome",
         required=True,
         max_length=100,
         on_change="handleNameChange"
     )
-    name_group.add_child(name_label).add_child(name_input)
+    name_group.add_child(name_input)
     
     # Grupo Email
     email_group = Div(add_class_name="form-group")
-    email_label = Label(html_for="email", add_class_name="form-label", content="Email:")
-    email_input = Input(
+    email_input = InputLabel(
         id="email",
         name="email",
         type="email",
+        label="Email:",
         add_class_name="form-control",
         placeholder="Digite seu email",
         required=True,
         on_change="handleEmailChange"
     )
-    email_group.add_child(email_label).add_child(email_input)
+    email_group.add_child(email_input)
     
     # Grupo País
     country_group = Div(add_class_name="form-group")
@@ -767,7 +815,7 @@ def get_example():
     bio_group.add_child(bio_label).add_child(bio_textarea)
     
     # Checkbox
-    newsletter_group = Div(add_class_name="form-group")
+    newsletter_group = Div(add_class_name="form-group !mt-2")
     newsletter_checkbox = Checkbox(
         id="newsletter",
         name="newsletter",
@@ -778,16 +826,15 @@ def get_example():
     newsletter_group.add_child(newsletter_checkbox)
     
     # Botões
-    actions_group = Div(add_class_name="form-actions")
+    actions_group = Div(add_class_name="form-actions space-x-1")
     submit_button = Button(
         type="submit",
-        add_class_name="btn btn-primary",
         content="Enviar",
         on_click="handleSubmitClick"
     )
     reset_button = Button(
         type="reset",
-        class_name="btn btn-secondary",
+        style_variant="secondary",
         content="Limpar",
         on_click="handleResetClick"
     )

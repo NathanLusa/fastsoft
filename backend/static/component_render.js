@@ -399,7 +399,7 @@ class ComponentRenderer {
      * Renderiza um checkbox
      */
     renderCheckbox(component) {
-        const $wrapper = $('<div class="checkbox-wrapper">');
+        const $wrapper = $('<div class="checkbox-wrapper flex items-center space-x-2">');
         const $input = $('<input type="checkbox">');
         const attrs = component.attributes || {};
 
