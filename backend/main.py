@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from components import get_example
+from components import get_example, get_simple_example
 
 templates = Jinja2Templates(directory="backend/templates")
 
@@ -34,3 +34,7 @@ async def read_root(request: Request):
 @app.get("/api/components")
 def read_item():
     return get_example()
+
+@app.get("/api/components/simple")
+def read_simple_item():
+    return get_simple_example()
