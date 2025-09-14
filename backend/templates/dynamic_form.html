@@ -1,0 +1,45 @@
+{% include "header.html" %}
+
+<div id="componentContainer" class="p-4"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const formData = JSON.parse({{ form_data | tojson | safe }});
+    window.componentRenderer.renderPage(formData, "#componentContainer");
+
+    // Example: Handle form submission with dynamic data
+    $(document).on('submit', '#dynamic-form', function (e) {
+        e.preventDefault();
+        const $form = $(this);
+        const isValid = window.componentRenderer.validateForm($form);
+
+        if (isValid) {
+            const formData = getFormData($form);
+            console.log("Form Data:", formData);
+
+            // You can send this data to your FastAPI endpoint
+            // For example:
+            $.ajax({
+                url: $form.attr('action'),
+                method: $form.attr('method'),
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function (response) {
+                    showSuccess("Formulário enviado com sucesso!");
+                    console.log("Response:", response);
+                },
+                error: function (xhr, status, error) {
+                    showError("Erro ao enviar formulário.");
+                    console.error("Error:", error);
+                }
+            });
+
+            showSuccess("Formulário simulado enviado com sucesso!");
+        } else {
+            showError("Por favor, corrija os erros no formulário.");
+        }
+    });
+    });
+</script>
+
+{% include "footer.html" %}
